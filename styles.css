@@ -1,0 +1,200 @@
+/*
+COLOR PALLETES
+white: #fff
+blue: #1d809f
+dark: #343a40
+*/
+
+/* GENERAL STYLES____start */
+
+* {
+  margin: 0;
+}
+
+/* style body */
+body {
+  background-color: #fff;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: 'Source Sans Pro', sans-serif;
+  color: #343a40;
+}
+
+a {
+  text-decoration: none;
+  color: #1d809f;
+}
+
+/* style button */
+.button {
+  display: inline-block;
+  box-sizing: border-box;
+  min-width: 144px;
+  max-width: 200px;
+  max-height: 64px;
+  margin-top: 48px;
+  padding: 18px 36px;
+  border-radius: 4px;
+  font-weight: 700;
+  font-size: 1rem;
+}
+.btn-blue {
+  background-color: #1d809f;
+  color: #fff;
+}
+.btn-dark {
+  background-color: #343a40;
+  color: #fff;
+}
+.btn-white {
+  background-color: #fff;
+  color: #343a40;
+}
+
+/* place container at center */
+.container {
+  width: auto;
+  height: auto;
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+/* style text */
+.f-yellow {
+  color: #ffe137;
+  font-size: 1rem;
+}
+/* GENERAL STYLES____end */
+
+
+/* SPECIFIC STYLES____start */
+/* header */
+header {
+  background-color: #ffe137;
+  height: 100vh;
+  min-height: 600px;
+}
+header h1 {
+  font-size: 5rem;
+}
+header h3 {
+  font-size: 1.75rem;
+  font-style: italic;
+}
+
+/* description */
+#description {
+  background-color: inherit;
+  padding: 128px 0;
+}
+#description h2 {
+  font-size: 2rem;
+}
+#description p {
+  font-size: 1.2rem;
+  font-weight: lighter;
+}
+
+/* services */
+#services {
+  background-color: #1d809f;
+  padding: 80px 0;
+  color: #fff;
+}
+#services h2 {
+  font-size: 3rem;
+}
+#service-grid {
+  margin: 40px auto 0;
+  width: 900px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+#service-grid h4 {
+  font-size: 1.5rem;
+}
+#service-grid p {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+.icon-circle-white {
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background-color: #fff;
+  margin: 0 auto 20px;
+}
+
+
+/* download */
+#download {
+  background-color: #ffe137;
+  padding: 128px 0;
+}
+#download>.container {
+  margin: 0 auto;
+  max-width: 480px;
+}
+#download h2 {
+  font-size: 3.5rem;
+}
+
+/* portofolio */
+#portofolio {
+  background-color: inherit;
+  padding: 80px 0;
+}
+#portofolio h2 {
+  font-size: 3rem;
+}
+#project-grid {
+  margin: 40px auto 0;
+  width: 900px;
+  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+.project {
+  border: 1px solid #ffe137;
+  padding: 180px 40px 40px;
+  text-align: left;
+}
+
+/* CTA */
+#cta {
+  background-color: #1d809f;
+  padding: 80px 0;
+}
+
+/* maps location API */
+#location {
+  background-color: #fffd86;
+  padding: 80px 0;
+}
+
+/* footer */
+footer {
+  background-color: inherit;
+  padding: 80px 0;
+}
+#socmed-grid {
+  margin: 0 auto;
+  width: 280px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  grid-gap: 20px;
+}
+.icon-circle-blue {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background-color: #1d809f;
+  margin: 0 auto 20px;
+}
