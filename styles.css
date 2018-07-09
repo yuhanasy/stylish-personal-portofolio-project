@@ -74,6 +74,9 @@ a {
 /* header */
 header {
   background-color: #ffe137;
+  background-image: url(pencil.jpg);
+  background-size: cover;
+  background-position: center;
   height: 100vh;
   min-height: 600px;
 }
@@ -101,19 +104,20 @@ header h3 {
 /* services */
 #services {
   background-color: #1d809f;
-  padding: 80px 0;
+  padding: 80px 0 100px;
   color: #fff;
 }
 #services h2 {
   font-size: 3rem;
 }
 #service-grid {
-  margin: 40px auto 0;
-  width: 900px;
+  margin: 60px auto 0;
+  width: 1140px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  justify-content: space-between;
+  justify-content: space-around;
   grid-gap: 20px;
+  grid-template-areas:  
+  'responsive redesigned favorited question';
 }
 #service-grid h4 {
   font-size: 1.5rem;
@@ -128,13 +132,32 @@ header h3 {
   border-radius: 50%;
   background-color: #fff;
   margin: 0 auto 20px;
+  font-size: 2rem;
+  color: #1d809f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-
+.responsive {
+  grid-area: responsive;
+}
+.redesigned {
+  grid-area: redesigned;
+}
+.favorited {
+  grid-area: favorited;
+}
+.question {
+  grid-area: question;
+}
 
 /* download */
 #download {
   background-color: #ffe137;
-  padding: 128px 0;
+  background-image: url(envelope-yellow.jpg);
+  background-size: cover;
+  background-position: center;
+  padding: 200px 0;
 }
 #download>.container {
   margin: 0 auto;
@@ -147,6 +170,7 @@ header h3 {
 /* portofolio */
 #portofolio {
   background-color: inherit;
+  height:auto;
   padding: 80px 0;
 }
 #portofolio h2 {
@@ -154,34 +178,76 @@ header h3 {
 }
 #project-grid {
   margin: 40px auto 0;
-  width: 900px;
-  height: 600px;
+  width: 1140px;
+  height: 800px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas: 
+  'item1 item2'
+  'item3 item4';
 }
 .project {
-  border: 1px solid #ffe137;
   padding: 180px 40px 40px;
   text-align: left;
+  color: #fff;
 }
+#item1 {
+  grid-area: item1;
+  background-image: url(envelope-blue.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#item2 {
+  grid-area: item2;
+  background-image: url(pencil-blue.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#item3 {
+  grid-area: item3;
+  background-image: url(strawberries.jpg);
+  background-size: cover;
+  background-position: center;
+}
+#item4 {
+  grid-area: item4;
+  background-image: url(envelope-yellow.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
 
 /* CTA */
 #cta {
   background-color: #1d809f;
+  color: #fff;
   padding: 80px 0;
 }
+#cta h2 {
+  font-size: 2rem;
+}
+#cta button {
+  margin-top: 20px;
+}
+
 
 /* maps location API */
 #location {
   background-color: #fffd86;
-  padding: 80px 0;
+  height: 400px;
+  max-width: 100vw;
+  background-image: url(gmaps.png);
+  background-size: cover;
+  background-position: center;
 }
 
 /* footer */
 footer {
   background-color: inherit;
   padding: 80px 0;
+}
+footer p {
+  font-weight: lighter;
+  font-size: 0.9rem;
 }
 #socmed-grid {
   margin: 0 auto;
@@ -197,4 +263,65 @@ footer {
   border-radius: 50%;
   background-color: #1d809f;
   margin: 0 auto 20px;
+  color: #fff;
+  font-size: 1.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1200px) {
+  #service-grid {
+    width: 800px;
+    height: 640px;
+    grid-template-areas: 
+    'responsive redesigned'
+    'favorited question'
+  }
+  
+  #project-grid {
+    width: 800px;
+    height: 600px;
+  }
+
+}
+
+@media screen and (max-width: 840px) {
+  header h1 {
+    font-size: 4rem;
+  }
+
+  #service-grid {
+    width: 160px;
+    height: 1000px;
+    justify-content: center;
+    grid-template-areas: 
+    'responsive' 
+    'redesigned'
+    'favorited' 
+    'question';
+  }
+  
+  #project-grid {
+    width: 480px;
+    height: 1350px;
+    grid-template-areas:
+    'item1'
+    'item2'
+    'item3'
+    'item4';
+  }  
+}
+
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  header h3 {
+    font-size: 1.25rem;
+  }
+  #project-grid {
+    width: 80%;
+    max-width: 480px;
+  }
 }
