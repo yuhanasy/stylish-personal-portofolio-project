@@ -366,7 +366,7 @@ footer p {
     'responsive redesigned'
     'favorited question';
   }
-  
+
   #project-grid {
     width: 800px;
     height: 600px;
@@ -412,6 +412,14 @@ footer p {
 }
 
 @media screen and (max-width: 640px) {
+  .head {
+    min-height: 300px;
+    height: 400px;
+  }
+  header .container {
+    margin: 0 auto;
+    width: 80%;
+  }
   header h1 {
     font-size: 3rem;
   }
