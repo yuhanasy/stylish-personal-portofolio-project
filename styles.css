@@ -82,6 +82,7 @@ a {
   top: 24px;
 }
 .humberger {
+  height: 22px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -94,6 +95,17 @@ a {
   height: 2px;
   margin: 4px 0;
   border-radius: 2px;
+}
+#menu-button:hover .bun:first-child {       
+  position: relative;
+  top: 6px;
+  transform: rotate(45deg);
+}
+#menu-button:hover .bun:nth-child(2) {
+  transform: rotate(-45deg);
+}
+#menu-button:hover .bun:last-child {
+  display: none;
 }
 /* GENERAL STYLES____end */
 
