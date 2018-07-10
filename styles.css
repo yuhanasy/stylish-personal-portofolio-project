@@ -67,6 +67,34 @@ a {
   color: #ffe137;
   font-size: 1rem;
 }
+
+/* menu button */
+#menu-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #5B5B5B;
+  opacity: .9;
+  width: 50px;
+  height: 50px;
+  border-radius: 6px;
+  right: 24px;
+  top: 24px;
+}
+.humberger {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+.bun {
+  background-color: white;
+  opacity: 0.95;
+  width: 20px;
+  height: 2px;
+  margin: 4px 0;
+  border-radius: 2px;
+}
 /* GENERAL STYLES____end */
 
 
@@ -189,6 +217,13 @@ header h3 {
   padding: 180px 40px 40px;
   text-align: left;
   color: #fff;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+.project:hover {
+  background-color: #1d809f;
+  opacity: 0.8;
+  transform: scale(0.8);
 }
 #item1 {
   grid-area: item1;
