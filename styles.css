@@ -96,13 +96,20 @@ a {
   margin: 4px 0;
   border-radius: 2px;
 }
+#menu-button:hover {
+  cursor: pointer;
+}
 #menu-button:hover .bun:first-child {       
   position: relative;
   top: 6px;
   transform: rotate(45deg);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 #menu-button:hover .bun:nth-child(2) {
   transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  transition-timing-function: ease-out;
 }
 #menu-button:hover .bun:last-child {
   display: none;
@@ -226,16 +233,49 @@ header h3 {
   'item3 item4';
 }
 .project {
-  padding: 180px 40px 40px;
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.project:hover .bg-image {
+  transition: .3s ease-out;
+  clip: rect(40px, 530px, 360px, 40px);
+}
+.project:hover .overlay {
+  transition: .3s ease-out;
+  opacity: 0.9;
+  clip: rect(40px, 530px, 360px, 40px);
+}
+.bg-image {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+.overlay {
+  background-color: #1d809f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  transition: .5s ease;
+  opacity: 0;
+  z-index: 1;
+}
+.text {
+  display: block;
+  position: absolute;
+  bottom: 80px;
+  left: 80px;
+  right: 80px;
+  z-index: 2;
   text-align: left;
   color: #fff;
-  transition-duration: .3s;
-  transition-timing-function: ease;
-}
-.project:hover {
-  background-color: #1d809f;
-  opacity: 0.8;
-  transform: scale(0.8);
 }
 #item1 {
   grid-area: item1;
@@ -261,6 +301,7 @@ header h3 {
   background-size: cover;
   background-position: center;
 }
+
 
 
 /* CTA */
@@ -320,24 +361,63 @@ footer p {
 @media screen and (max-width: 1200px) {
   #service-grid {
     width: 800px;
-    height: 640px;
+    height: 500px;
     grid-template-areas: 
     'responsive redesigned'
-    'favorited question'
+    'favorited question';
   }
   
   #project-grid {
     width: 800px;
     height: 600px;
   }
-
+  .project:hover .bg-image {
+    clip: rect(20px 380px 280px 20px);
+  }
+  .project:hover .overlay {
+    opacity: 0.9;
+    clip: rect(20px 380px 280px 20px);
+  }
 }
-
-@media screen and (max-width: 840px) {
+@media screen and (max-width: 960px) {
   header h1 {
     font-size: 4rem;
   }
+  #service-grid {
+    width: 600px;
+  }
+  #project-grid {
+    width: 480px;
+    height: 1350px;
+    grid-row-gap: 20px;
+    grid-template-areas:
+    'item1'
+    'item2'
+    'item3'
+    'item4';
+  }
+  .text {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+  }
+  .project:hover .bg-image {
+    clip: initial;
+  }
+  .project:hover .overlay {
+    opacity: 0.9;
+    clip: initial;
+  }
+}
 
+@media screen and (max-width: 640px) {
+  header h1 {
+    font-size: 3rem;
+  }
+  header h3 {
+    font-size: 1.25rem;
+  }
   #service-grid {
     width: 160px;
     height: 1000px;
@@ -347,25 +427,6 @@ footer p {
     'redesigned'
     'favorited' 
     'question';
-  }
-  
-  #project-grid {
-    width: 480px;
-    height: 1350px;
-    grid-template-areas:
-    'item1'
-    'item2'
-    'item3'
-    'item4';
-  }  
-}
-
-@media screen and (max-width: 600px) {
-  header h1 {
-    font-size: 3rem;
-  }
-  header h3 {
-    font-size: 1.25rem;
   }
   #project-grid {
     width: 80%;
