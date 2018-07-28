@@ -100,19 +100,19 @@ a {
   cursor: pointer;
   opacity: 1;
 }
-#menu-button:hover .bun:first-child {       
+.bunTop {       
   position: relative;
   top: 6px;
   transform: rotate(45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:hover .bun:nth-child(2) {
+.bunMiddle {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:hover .bun:last-child {
+.bunBottom {
   display: none;
 }
 /* GENERAL STYLES____end */
@@ -123,6 +123,7 @@ a {
 #menu {
   background-color: #1d809f;
   color: #fff;
+  border-left: 0.1px solid #2995b6;
   text-align: left;
   width: 250px;
   height: 100vh;
