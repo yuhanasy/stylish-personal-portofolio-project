@@ -71,16 +71,14 @@ a {
 /* menu button */
 #menu-button {
   position: fixed;
-  top: 20px;
-  right: 20px;
   background-color: #5B5B5B;
-  opacity: .9;
+  opacity: .8;
   width: 50px;
   height: 50px;
   border-radius: 6px;
-  right: 24px;
-  top: 24px;
-  z-index: 3;
+  right: 16px;
+  top: 16px;
+  z-index: 4;
 }
 .humberger {
   height: 22px;
@@ -97,22 +95,22 @@ a {
   margin: 4px 0;
   border-radius: 2px;
 }
-#menu-button:hover {
+#menu-button:active {
   cursor: pointer;
 }
-#menu-button:hover .bun:first-child {       
+#menu-button:active .bun:first-child {       
   position: relative;
   top: 6px;
   transform: rotate(45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:hover .bun:nth-child(2) {
+#menu-button:active .bun:nth-child(2) {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:hover .bun:last-child {
+#menu-button:active .bun:last-child {
   display: none;
 }
 /* GENERAL STYLES____end */
@@ -120,6 +118,43 @@ a {
 
 /* SPECIFIC STYLES____start */
 /* header */
+#menu {
+  display: none;
+  background-color: #1d809f;
+  color: #fff;
+  text-align: left;
+  width: 250px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  z-index: 3;
+}
+#menu-title {
+  background-color: #187794;
+  height: 82px;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: center;
+  
+}
+#menu-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#menu-list li {
+  margin: 0;
+  padding: 20px 0 20px 16px;
+}
+#menu-list li:hover {
+  background-color: #2995b6;
+}
+
 header {
   background-color: #ffe137;
   background-image: url(pencil.jpg);
