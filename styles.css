@@ -72,7 +72,7 @@ a {
 #menu-button {
   position: fixed;
   background-color: #5B5B5B;
-  opacity: .8;
+  opacity: 0.8;
   width: 50px;
   height: 50px;
   border-radius: 6px;
@@ -81,6 +81,7 @@ a {
   z-index: 4;
 }
 .humberger {
+  opacity: 1 !important;
   height: 22px;
   position: absolute;
   top: 50%;
@@ -89,28 +90,29 @@ a {
 }
 .bun {
   background-color: white;
-  opacity: 0.95;
+  opacity: 1;
   width: 20px;
   height: 2px;
   margin: 4px 0;
   border-radius: 2px;
 }
-#menu-button:active {
+#menu-button:hover {
   cursor: pointer;
+  opacity: 1;
 }
-#menu-button:active .bun:first-child {       
+#menu-button:hover .bun:first-child {       
   position: relative;
   top: 6px;
   transform: rotate(45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:active .bun:nth-child(2) {
+#menu-button:hover .bun:nth-child(2) {
   transform: rotate(-45deg);
   transition-duration: 0.3s;
   transition-timing-function: ease-out;
 }
-#menu-button:active .bun:last-child {
+#menu-button:hover .bun:last-child {
   display: none;
 }
 /* GENERAL STYLES____end */
@@ -119,7 +121,6 @@ a {
 /* SPECIFIC STYLES____start */
 /* header */
 #menu {
-  display: none;
   background-color: #1d809f;
   color: #fff;
   text-align: left;
@@ -129,6 +130,12 @@ a {
   top: 0;
   right: 0;
   z-index: 3;
+  transition: .3s ease-out;
+  transform: translateX(250px);
+}
+.active {
+  transition: .3s ease-out !important;
+  transform: translateX(0) !important;
 }
 #menu-title {
   background-color: #187794;
@@ -147,9 +154,13 @@ a {
   flex-direction: column;
   justify-content: center;
 }
+a {
+  text-decoration: none;
+}
 #menu-list li {
   margin: 0;
   padding: 20px 0 20px 16px;
+  color: #fff;
 }
 #menu-list li:hover {
   background-color: #2995b6;
